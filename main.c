@@ -2,28 +2,30 @@
 #include"calculadora.h"
 int main(void)
 {
-int a,b,i,r;
-printf("Ingrese las 2 variables");
-scanf("%d",&a);
-scanf("%d",&b);
-printf("Ingrese:\n1 para sumar\n2 para resta\n3 para multiplicacion\n4 para division");
-scanf("%d",&i);
+int a,b,operando,resultado;
 
-switch(i)
+printf("Ingrese el primer número");
+scanf("%d",&a);
+printf("Ingrese el segundo número");
+scanf("%d",&b);
+printf("Ingrese:\n1 para sumar\n2 para resta\n3 para multiplicar\n4 para dividir");
+scanf("%d",&operando);
+
+switch(operando)
 {
-case 1: 
-       r=suma(a,b);
-       break;
-case 2: 
-       r=resta(a,b);
-       break;
-case 3: 
-       r=multiplicacion(a,b);
-       break;
-case 4: 
-       r=division(a,b);
-       break;
+	case 1:
+		resultado=suma(a,b);
+		break;
+	case 2:
+		resultado=resta(a,b);
+		break;
+	case 3:
+		resultado=multiplicacion(a,b);
+		break;
+	case 4:
+		resultado=division(a,b);
+		break;
 }
-printf("El resultado es %d",r);
+printf("El resultado es %d",resultado);
 return 0;
 }
